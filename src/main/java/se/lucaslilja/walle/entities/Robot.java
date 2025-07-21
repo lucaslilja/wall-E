@@ -6,15 +6,15 @@ package se.lucaslilja.walle.entities;
  * @since 0.1.0
  */
 public final class Robot {
-    private final Compass compass;
     private Position position;
+    private final Compass compass;
 
-    public Robot(Compass.Direction startingDirection, Position startingPosition) {
-        this.compass = new Compass(startingDirection);
+    public Robot(Position startingPosition, Compass.Direction startingDirection) {
         this.position = startingPosition;
+        this.compass = new Compass(startingDirection);
     }
 
-    public String getPosition() {
+    public String getPositionAndDirection() {
         return "%d %d %s".formatted(
                 position.x(),
                 position.y(),
@@ -36,5 +36,9 @@ public final class Robot {
 
     public void turnRight() {
         compass.turnRight();
+    }
+
+    public Position getPosition() {
+        return position;
     }
 }

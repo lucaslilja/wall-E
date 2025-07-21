@@ -2,7 +2,7 @@ package se.lucaslilja.walle.entities;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @since 0.1.0
